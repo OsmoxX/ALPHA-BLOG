@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'about', to: 'pages#about'
-  resources :articles, only: [:show, :index, :new, :create]
+  resources :articles
 
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
