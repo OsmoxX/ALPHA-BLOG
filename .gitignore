@@ -32,3 +32,16 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+# Ignoruj pliki Node.js (które pojawiły się przez pomyłkę)
+/node_modules
+/package.json
+/package-lock.json
+/yarn.lock
+
+# Ignoruj pobrane pliki JS (bo używamy CDN)
+/vendor/javascript/
+
+# Ignoruj pliki tymczasowe
+*.html
+!/app/views/**/*.html.erb
+!/public/*.html
