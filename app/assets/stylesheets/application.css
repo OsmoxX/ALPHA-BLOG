@@ -7,10 +7,34 @@
    więc wszystkie style tutaj automatycznie go nadpiszą. */
 
 .navbar {
-    background-color: #FDF6EA !important;
+    background-color: black  !important;
 }
 
-/* Możesz dodawać więcej swoich styli poniżej */
 body {
-    background-color: #fcfcfc;
+    background-color: lightgray;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#home-container {
+    margin-top: 25px;
+}
+
+#home-jumbotron {
+    background-image: url('/images/image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 425px;
 }
