@@ -9,15 +9,15 @@
         <li class="nav-item active">
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%= users_path %>" tabindex="-1" aria-disabled="true">Bloggers</a>
+          <%= link_to "Bloggers", users_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Articles
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="<%= articles_path %>">View articles</a></li>
-            <li><a class="dropdown-item" href="<%= new_article_path %>">Create new article</a></li>
+            <li><%= link_to "View articles", articles_path, class: "dropdown-item" %></li>
+            <li><%= link_to "Create new article", new_article_path, class: "dropdown-item" %></li>
             <li>
               <hr class="dropdown-divider">
             </li>

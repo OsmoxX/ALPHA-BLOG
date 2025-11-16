@@ -6,7 +6,7 @@
       <%= form_with(scope: :session, class:"shadow-lg p-3 mb-3 bg-info rounded", local: true) do |f| %>
 
         <div class="form-group row mb-3">
-          <%= f.label :description, class: "col-2 col-form-label text-light" %>
+          <%= f.label :Email, class: "col-2 col-form-label text-light" %>
           <div class="col-10">
             <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "Enter your email adress" %>
           </div>

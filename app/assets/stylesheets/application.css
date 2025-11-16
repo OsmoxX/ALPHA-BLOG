@@ -1,10 +1,4 @@
-/*
- * application.css
- * Bootstrap jest ładowany z application.js
- */
 
-/* Ten plik jest ładowany PO Bootstrapie,
-   więc wszystkie style tutaj automatycznie go nadpiszą. */
 
 .navbar {
     background-color: black  !important;
@@ -70,3 +64,19 @@ body {
     margin-right: 1em; }
 .flickr_pagination .next_page {
     margin-left: 1em; }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#content-wrapper {
+    animation: fadeIn 0.4s ease-out;
+}
