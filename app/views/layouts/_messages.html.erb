@@ -1,6 +1,14 @@
 <div class="container">
   <% flash.each do |name, msg| %>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <% alert_class = case name.to_sym
+                    when :notice then 'success'
+                    when :alert then 'warning'
+                    when :error then 'danger'
+                    else 'info'                     # Dla innych komunikatów
+                    end
+    %>
+
+    <div class="alert alert-<%= alert_class %> alert-dismissible fade show" role="alert">
       <%= msg %>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
