@@ -1,6 +1,6 @@
 
 class CategoriesController < ApplicationController
-  before_action :require_admin, except: [:index, :show]
+  before_action :require_admin, except: [ :index, :show ]
   def index
     @categories = Category.paginate(page: params[:page], per_page: 5)
   end
@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
       flash[:notice] = "Category was successfully created."
       redirect_to @category
     else
-      render 'new', status: :unprocessable_content
+      render "new", status: :unprocessable_content
     end
   end
 
