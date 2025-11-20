@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, except: [:index, :show]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :set_article, only: [ :show, :edit, :update, :destroy ]
+  before_action :require_user, except: [ :index, :show ]
+  before_action :require_same_user, only: [ :edit, :update, :destroy ]
   def show
   end
 
@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was created successfully!"
       redirect_to @article
     else
-      render 'new', status: :unprocessable_entity
+      render "new", status: :unprocessable_entity
     end
   end
 
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was successfully updated!"
       redirect_to @article
     else
-      render 'edit', status: :unprocessable_entity
+      render "edit", status: :unprocessable_entity
     end
   end
 
@@ -57,5 +57,4 @@ class ArticlesController < ApplicationController
       redirect_to @article
     end
   end
-
 end

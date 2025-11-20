@@ -1,7 +1,6 @@
-require 'test_helper'
+require "test_helper"
 
 class CategoryTest < ActiveSupport::TestCase
-
   def setup
     @category = Category.new(name: "Sports")
   end
@@ -30,5 +29,4 @@ class CategoryTest < ActiveSupport::TestCase
     @category.name = "aa"
     assert_not @category.valid?
   end
-
 end

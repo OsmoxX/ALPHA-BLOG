@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:edit, :update]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [ :show, :edit, :update, :destroy ]
+  before_action :require_user, only: [ :edit, :update ]
+  before_action :require_same_user, only: [ :edit, :update, :destroy ]
   def show
     @articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Your profile was successfully updated."
       redirect_to @user
     else
-      render 'edit', status: :unprocessable_entity
+      render "edit", status: :unprocessable_entity
     end
   end
 
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed up!"
       redirect_to articles_path
     else
-      render 'new', status: :unprocessable_entity
+      render "new", status: :unprocessable_entity
     end
   end
 
@@ -62,5 +62,4 @@ class UsersController < ApplicationController
       redirect_to @user
     end
   end
-
 end
